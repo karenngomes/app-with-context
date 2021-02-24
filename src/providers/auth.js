@@ -5,6 +5,7 @@ export const AuthContext = React.createContext({});
 export default function AuthProvider({ children }) {
   const user = {
     name: "Karen",
+    color: 'red'
   };
 
   return (
