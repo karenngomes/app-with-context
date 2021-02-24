@@ -6,11 +6,12 @@ export default function AuthProvider({ children }) {
   const [user, setUser] = React.useState({
     name: "",
   });
-//   const user = {
-//     name: "Karen",
-//   };
 
   return (
-    <AuthContext.Provider value={{ user, setUser }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user, setUser }}>
+      {children}
+    </AuthContext.Provider>
   );
 }
+
+export const useAuth = () => React.useContext(AuthContext);
